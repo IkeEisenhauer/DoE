@@ -16,7 +16,6 @@ shinyServer(function(input, output) {
     values <- reactiveValues()
     values$df <- exp_data
     observe({
-
         # your action button condition
         if(input$addButton > 0) {
           # create the new line to be added from your inputs
@@ -25,10 +24,12 @@ shinyServer(function(input, output) {
           # note the unlist of newLine, this prevents a bothersome warning message that the rbind will return regarding rownames because of using isolate.
           isolate(values$df <- rbind(as.matrix(values$df), unlist(newLine)))
         }
+      })
+     observe({
        # your action button condition
         if(input$btnDownload > 0) {
           # Download Data to User
-            write.csv(exp_data,"Experiment_Data.csv")
+            isolate(write.csv(exp_data,"Experiment_Data.csv"))
         }
       })
       output$table <- renderTable({values$df}, include.rownames=F)
