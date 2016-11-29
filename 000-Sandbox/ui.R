@@ -3,7 +3,6 @@
 ##############################
 
 library(shiny) 
-data(iris)
 
 shinyUI(pageWithSidebar( 
   
