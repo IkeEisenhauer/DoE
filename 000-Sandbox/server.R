@@ -3,18 +3,16 @@
 ##########################################
 
 library(shiny)
-data(iris)
 
 shinyServer(function(input, output) { 
-  
-       # just a small part of iris for display
-      iris_sample <- iris[sample(nrow(iris), 10),]
-      row.names(iris_sample) <- NULL
 
-      # The important part of reactiveValues()
-      values <- reactiveValues()
-      values$df <- iris_sample
-      observe({
+  # Reset Data
+    exp_data = data.frame()
+  
+  # The important part of reactiveValues()
+    values <- reactiveValues()
+    values$df <- exp_data
+    observe({
 
         # your action button condition
         if(input$addButton > 0) {
