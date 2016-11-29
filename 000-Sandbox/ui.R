@@ -2,7 +2,8 @@
 ### data Types - ui.R ########
 ##############################
 
-library(shiny)  
+library(shiny) 
+data(iris)
 
 shinyUI(pageWithSidebar( 
   
@@ -43,11 +44,17 @@ shinyUI(pageWithSidebar(
     textInput(inputId = "comment",
               label = "9. textInput",
               value = "")
-    
+     textInput("species", label="Add a new species", value="Enter species"),
+        numericInput("sepal.length", label="Add a new sepal length", value=""),
+        numericInput("sepal.width", label="Add a new speal width", value=""),
+        numericInput("petal.length", label="Add a new petal length", value=""),
+        numericInput("petal.width", label="Add a new petal width", value=""),
+        actionButton("addButton", "UPLOAD!")
   ),
   
   mainPanel( 
     h3("Output and data type"),
-    tableOutput("textDisplay")
+    tableOutput("textDisplay"),
+    tableOutput("table")
   )
 ))
