@@ -29,4 +29,3 @@ shinyServer(function(input, output) {
     
     
   })
-})
