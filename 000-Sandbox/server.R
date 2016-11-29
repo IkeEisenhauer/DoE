@@ -29,7 +29,7 @@ shinyServer(function(input, output) {
       output$btnDownload <- downloadHandler(
         filename = function() {paste("Experimental_Data", ".csv", sep='')},
         content = function(file) {
-          write.csv(exp_data(),file)
+          write.csv(exp_data,file)
         }
       )  
                             
