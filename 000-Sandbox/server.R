@@ -25,13 +25,14 @@ shinyServer(function(input, output) {
           isolate(values$df <- rbind(as.matrix(values$df), unlist(newLine)))
         }
       })
-     observe({
-       # your action button condition
-        if(input$btnDownload > 0) {
-          # Download Data to User
-            isolate(write.csv(exp_data,"Experiment_Data.csv"))
+
+      output$btnDownload <- downloadHandler(
+        filename = function() {paste("Experimental_Data", ".csv", sep='')},
+        content = function(file) {
+          write.csv(exp_data(),file)
         }
-      })
+      )  
+                            
       output$table <- renderTable({values$df}, include.rownames=F)
         
   })
