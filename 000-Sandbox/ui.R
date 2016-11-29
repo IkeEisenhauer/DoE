@@ -16,7 +16,7 @@ shinyUI(pageWithSidebar(
         numericInput("petal.length", label="Add a new petal length", value=""),
         numericInput("petal.width", label="Add a new petal width", value=""),
         actionButton("addButton", "UPLOAD!"),
-        actionButton("btnDownload", "DOWNLOAD Experimental Data")
+        downloadButton("btnDownload", "DOWNLOAD Experimental Data")
   ),
   
   mainPanel( 
