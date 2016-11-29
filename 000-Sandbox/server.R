@@ -7,7 +7,10 @@ library(shiny)
 shinyServer(function(input, output) { 
 
   # Reset Data
-    exp_data = data.frame()
+    exp_data = read.table(text="",
+                         colClasses = c("double","double","double","double","character"),
+                         col.names = c("sepal.length","sepal.width","petal.length","petal.width","species")
+                         )
   
   # The important part of reactiveValues()
     values <- reactiveValues()
