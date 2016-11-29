@@ -22,8 +22,19 @@ shinyServer(function(input, output) {
           # note the unlist of newLine, this prevents a bothersome warning message that the rbind will return regarding rownames because of using isolate.
           isolate(values$df <- rbind(as.matrix(values$df), unlist(newLine)))
         }
+       # your action button condition
+        if(input$btnDownload > 0) {
+          # Download Data to User
+          output$downloadData <- downloadHandler(
+            filename = function(){
+              "Experiment_Data.csv"
+            }
+            content = function(file){
+              write.csv(exp_data,file)
+            }
+            )
+        }
       })
       output$table <- renderTable({values$df}, include.rownames=F)
-    
-    
+        
   })
