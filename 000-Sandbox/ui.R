@@ -32,6 +32,7 @@ dashboardPage(
       tabItem(
         tabName = "ProcessControls",
         div(style="height: 1200px;",box(
+          width = 750,
           title = "Process Controls",
           status = "primary",
           solidHeader = TRUE,
