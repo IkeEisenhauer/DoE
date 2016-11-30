@@ -45,29 +45,31 @@ dashboardPage(
         ))
       ),
       tabItem(tabName = "MachineControls",
-        box(
+        div(style="height: 1200px;",box(
+          width = 750,
           title = "Machine Controls",
           status = "primary",
           solidHeader = TRUE,
-          sliderInput(inputId="B", label="B", min=0, max=3,value = 1, step=0.1),
-          sliderInput(inputId="E", label="E", min=0, max=2.5,value = 1, step=0.1),
-          sliderInput(inputId="F", label="F", min=0, max=2,value = 1, step=0.1),
-          sliderInput(inputId="K", label="K", min=0, max=1.2,value = 1, step=0.1),
-          sliderInput(inputId="N", label="N", min=0, max=1.5,value = 1, step=0.1),
-          sliderInput(inputId="Q", label="Q", min=0, max=10,value = 1, step=0.1)
+          div(style="height: 150px;",sliderInput(inputId="B", label="B", min=0, max=3,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="E", label="E", min=0, max=2.5,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="F", label="F", min=0, max=2,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="K", label="K", min=0, max=1.2,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="N", label="N", min=0, max=1.5,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="Q", label="Q", min=0, max=10,value = 1, step=0.1))
         )
       ),
       tabItem(tabName = "MaterialProperties",
-        box(
+        div(style="height: 1200px;",box(
+          width = 750,
           title = "Material Properties",
           status = "primary",
           solidHeader = TRUE,
-          sliderInput(inputId="G", label="G", min=0, max=2.5,value = 1, step=0.1),
-          sliderInput(inputId="H", label="H", min=0, max=2,value = 1, step=0.1),
-          sliderInput(inputId="J", label="J", min=0, max=3,value = 1, step=0.1),
-          sliderInput(inputId="M", label="M", min=0, max=2,value = 1, step=0.1),
-          sliderInput(inputId="O", label="O", min=0.4, max=3.5,value = 1, step=0.1),
-          sliderInput(inputId="P", label="P", min=0, max=2.0,value = 1, step=0.1)
+          div(style="height: 150px;",sliderInput(inputId="G", label="G", min=0, max=2.5,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="H", label="H", min=0, max=2,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="J", label="J", min=0, max=3,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="M", label="M", min=0, max=2,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="O", label="O", min=0.4, max=3.5,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="P", label="P", min=0, max=2.0,value = 1, step=0.1))
         )
       ),
       tabItem(tabName = "ExperimentalResults",
