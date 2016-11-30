@@ -1,5 +1,5 @@
 ##########################################
-##### data types and values - server.R ###
+##### DoE Game 1 [Based on Diamond] - server.R ###
 ##########################################
 
 library(shiny)
@@ -7,9 +7,8 @@ library(shiny)
 shinyServer(function(input, output) { 
 
   # Reset Data
-    exp_data = read.table(text="",
-                         colClasses = c("double","double","double","double","character"),
-                         col.names = c("sepal.length","sepal.width","petal.length","petal.width","species")
+    exp_data = read.table(text="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,YEILD",
+                         colClasses = c("double","double","double","double","double","double","double","double","double","double","double","double","double","double","double","double","double","double"),
                          )
   
   # The important part of reactiveValues()
@@ -18,8 +17,35 @@ shinyServer(function(input, output) {
     observe({
         # your action button condition
         if(input$addButton > 0) {
+          # Create Yield
+          YLD <- sqrt(abs(15*(2-(input$A-1)^2-(input$F-1)^2))) 
+          YLD <- YLD + 15*(input$B)^2*exp(0.64-(input$B)^2-10*(input$B-input$G)^2)
+          YLD <- YLD + 50*input$C*exp(0.04-(input$C)^2-10*(6*input$C-input$H)^2)
+          YLD <- YLD + 0.5*input$D*input$E
+          YLD <- YLD + 5*abs(input$I-input$K)
+          YLD <- YLD + (input$J)^2 + (input$M)^2 - (input$J*input$M)
+          YLD <- YLD + 10*exp(-100*((0.72*input$L-1.3)^2+(input$N-1.3)^2))
+          
           # create the new line to be added from your inputs
-          newLine <- isolate(c(input$sepal.length, input$sepal.width, input$petal.length, input$petal.width, input$species))
+          newLine <- isolate(c(input$A,
+                               input$B,
+                               input$C,
+                               input$D,
+                               input$E,
+                               input$F,
+                               input$G,
+                               input$H,
+                               input$I,
+                               input$J,
+                               input$K,
+                               input$L,
+                               input$M,
+                               input$N,
+                               input$O,
+                               input$P,
+                               input$Q,
+                               input$R,
+                               YLD))
           # update your data
           # note the unlist of newLine, this prevents a bothersome warning message that the rbind will return regarding rownames because of using isolate.
           isolate(values$df <- rbind(as.matrix(values$df), unlist(newLine)))
@@ -27,7 +53,7 @@ shinyServer(function(input, output) {
       })
 
       output$btnDownload <- downloadHandler(
-        filename = function() {paste("Experimental_Data", ".csv", sep='')},
+        filename = function() {paste("Experimental_Data_001", ".csv", sep='')},
         content = function(file) {
           write.csv(values$df,file)
         }
