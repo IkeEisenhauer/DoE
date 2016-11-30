@@ -73,7 +73,7 @@ dashboardPage(
       tabItem(tabName = "ExperimentalResults",
         h3("Experimental Results"),
         downloadButton("btnDownload", "Download Experimental Data"),
-        dataTableOutput("table")
+        tableOutput("table")
       )
     )
   )
