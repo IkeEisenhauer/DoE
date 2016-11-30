@@ -9,7 +9,7 @@ dashboardPage(
   skin="green",
   dashboardHeader(
     title="DoE Simulation 001 - Eisenhauer",
-    titleWidth = 450
+    titleWidth = 350
   ),
   dashboardSidebar(
     width = 350,
@@ -20,8 +20,8 @@ dashboardPage(
       menuItem("Material Properties", tabName = "MaterialProperties", icon = icon("dashboard")),
       menuItem("Experimental Results", tabName = "ExperimentalResults", icon = icon("dashboard"))
       ),
-    actionButton("addButton", "Run Experiment"),
-    downloadButton("btnDownload", "DOWNLOAD Experimental Data")
+    actionButton("addButton", "Run Experiment"),<br>,
+    downloadButton("btnDownload", "Download Experimental Data")
   ),
   dashboardBody( 
     tabItems(
