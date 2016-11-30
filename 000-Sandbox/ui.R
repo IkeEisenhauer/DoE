@@ -21,9 +21,7 @@ dashboardPage(
       menuItem("Experimental Results", tabName = "ExperimentalResults", icon = icon("dashboard"))
       ),
     HTML("<hr>"),
-    actionButton("addButton", "Run Experiment"),
-    HTML("<br><br>"),
-    downloadButton("btnDownload", "Download Experimental Data")
+    actionButton("addButton", "Run Experiment")
   ),
   dashboardBody( 
     tabItems(
@@ -74,7 +72,8 @@ dashboardPage(
       ),
       tabItem(tabName = "ExperimentalResults",
         h3("Experimental Results"),
-        tableOutput("table")
+        downloadButton("btnDownload", "Download Experimental Data"),
+        dataTableOutput("table")
       )
     )
   )
