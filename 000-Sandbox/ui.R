@@ -10,7 +10,7 @@ shinyUI(pageWithSidebar(
   
   sidebarPanel(
     
-     textInput(sliderInput(inputId="A", label="A", min=0, max=3.5,value = 1, step=0.1),
+     sliderInput(inputId="A", label="A", min=0, max=3.5,value = 1, step=0.1),
                sliderInput(inputId="B", label="B", min=0, max=3,value = 1, step=0.1),
                sliderInput(inputId="C", label="C", min=0, max=2,value = 1, step=0.1),
                sliderInput(inputId="D", label="D", min=0, max=5,value = 1, step=0.1),
