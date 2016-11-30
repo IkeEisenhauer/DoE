@@ -7,12 +7,14 @@ library(shiny)
 shinyServer(function(input, output) { 
 
   # Reset Data
-    exp_data = read.table(text="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,YLD",
-                         colClasses = c("double","double","double","double",
+    exp_data = read.table(text="",
+                         col.names=c("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","YLD"),
+                          colClasses = c("double","double","double","double",
                                         "double","double","double","double",
                                         "double","double","double","double",
                                         "double","double","double","double",
-                                        "double","double","double")                         )
+                                        "double","double","double") 
+                         )
   
   # The important part of reactiveValues()
     values <- reactiveValues()
