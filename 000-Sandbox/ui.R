@@ -42,7 +42,8 @@ dashboardPage(
           sliderInput(inputId="D", label="D", min=0, max=5,value = 1, step=0.1),
           sliderInput(inputId="E", label="E", min=0, max=2.5,value = 1, step=0.1),
           sliderInput(inputId="I", label="I", min=0.4, max=2,value = 1, step=0.1),
-          sliderInput(inputId="L", label="L", min=0, max=2,value = 1, step=0.1)
+          sliderInput(inputId="L", label="L", min=0, max=2,value = 1, step=0.1),
+          sliderInput(inputId="R", label="L", min=0, max=18,value = 1, step=0.1)
         )
       ),
       tabItem(tabName = "MachineControls",
