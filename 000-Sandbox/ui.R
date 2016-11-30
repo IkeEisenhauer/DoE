@@ -14,14 +14,14 @@ dashboardPage(
   dashboardSidebar(
     width = 350,
     sidebarMenu(
-      menuItem("Overview", tabName = "Overview", icon = icon("dashboard")),
-      menuItem("Process Controls", tabName = "ProcessControls", icon = icon("dashboard")),
-      menuItem("Machine Controls", tabName = "MachineControls", icon = icon("dashboard")),
-      menuItem("Material Properties", tabName = "MaterialProperties", icon = icon("dashboard")),
-      menuItem("Experimental Results", tabName = "ExperimentalResults", icon = icon("dashboard"))
+      menuItem("Overview", tabName = "Overview", icon = icon("info-circle")),
+      menuItem("Process Controls", tabName = "ProcessControls", icon = icon("industry")),
+      menuItem("Machine Controls", tabName = "MachineControls", icon = icon("steam")),
+      menuItem("Material Properties", tabName = "MaterialProperties", icon = icon("flask")),
+      menuItem("Experimental Results", tabName = "ExperimentalResults", icon = icon("table"))
       ),
     HTML("<hr>"),
-    actionButton("addButton", "Run Experiment")
+    actionButton("addButton", "Run Experiment", icon=icon("play"))
   ),
   dashboardBody( 
     tabItems(
