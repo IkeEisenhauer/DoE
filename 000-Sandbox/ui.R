@@ -67,4 +67,4 @@ dashboardPage(
         tableOutput("table")
       )
      )
-  ))
+  )
