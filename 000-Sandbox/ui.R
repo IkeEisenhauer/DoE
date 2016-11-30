@@ -20,7 +20,8 @@ dashboardPage(
       menuItem("Material Properties", tabName = "MaterialProperties", icon = icon("dashboard")),
       menuItem("Experimental Results", tabName = "ExperimentalResults", icon = icon("dashboard"))
       ),
-    actionButton("addButton", "Run Experiment"),<br>,
+    actionButton("addButton", "Run Experiment"),
+    HTML("<br>"),
     downloadButton("btnDownload", "Download Experimental Data")
   ),
   dashboardBody( 
