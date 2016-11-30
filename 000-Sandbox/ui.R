@@ -3,12 +3,11 @@
 ##############################
 
 library(shiny) 
+library(shinydashboard)
 
-shinyUI(pageWithSidebar( 
-  
-  headerPanel("DoE Simulation 001 - Eisenhauer"), 
-  
-  sidebarPanel(
+dashboardPage(
+  dashboardHeader(title="DoE Simulation 001 - Eisenhauer"),
+  dashboardSidebar(
     
      sliderInput(inputId="A", label="A", min=0, max=3.5,value = 1, step=0.1),
                sliderInput(inputId="B", label="B", min=0, max=3,value = 1, step=0.1),
@@ -32,7 +31,7 @@ shinyUI(pageWithSidebar(
         downloadButton("btnDownload", "DOWNLOAD Experimental Data")
   ),
   
-  mainPanel( 
+  dashboardBody( 
     h3("Output and data type"),
     tableOutput("table")
   )
