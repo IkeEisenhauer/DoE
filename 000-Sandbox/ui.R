@@ -56,7 +56,7 @@ dashboardPage(
           div(style="height: 150px;",sliderInput(inputId="K", label="K", min=0, max=1.2,value = 1, step=0.1)),
           div(style="height: 150px;",sliderInput(inputId="N", label="N", min=0, max=1.5,value = 1, step=0.1)),
           div(style="height: 150px;",sliderInput(inputId="Q", label="Q", min=0, max=10,value = 1, step=0.1))
-        )
+        ))
       ),
       tabItem(tabName = "MaterialProperties",
         div(style="height: 1200px;",box(
@@ -70,7 +70,7 @@ dashboardPage(
           div(style="height: 150px;",sliderInput(inputId="M", label="M", min=0, max=2,value = 1, step=0.1)),
           div(style="height: 150px;",sliderInput(inputId="O", label="O", min=0.4, max=3.5,value = 1, step=0.1)),
           div(style="height: 150px;",sliderInput(inputId="P", label="P", min=0, max=2.0,value = 1, step=0.1))
-        )
+        ))
       ),
       tabItem(tabName = "ExperimentalResults",
         h3("Experimental Results"),
