@@ -14,6 +14,8 @@ dashboardPage(
       menuItem("Machine Controls", tabName = "MachineControls", icon = icon("dashboard")),
       menuItem("Material Properties", tabName = "MaterialProperties", icon = icon("dashboard")),
       menuItem("Experimental Results", tabName = "ExperimentalResults", icon = icon("dashboard")),
+      actionButton("addButton", "Run Experiment"),
+      downloadButton("btnDownload", "DOWNLOAD Experimental Data")
   ),
   
   dashboardBody( 
