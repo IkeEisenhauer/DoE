@@ -6,10 +6,13 @@ library(shiny)
 library(shinydashboard)
 
 dashboardPage(
+  skin="green",
   dashboardHeader(
-    title="DoE Simulation 001 - Eisenhauer"
+    title="DoE Simulation 001 - Eisenhauer",
+    titleWidth = 450
   ),
   dashboardSidebar(
+    width = 350,
     sidebarMenu(
       menuItem("Overview", tabName = "Overview", icon = icon("dashboard")),
       menuItem("Process Controls", tabName = "ProcessControls", icon = icon("dashboard")),
@@ -32,7 +35,7 @@ dashboardPage(
           title = "Process Controls",
           status = "primary",
           solidHeader = TRUE,
-          sliderInput(inputId="A", label="A", min=0, max=3.5,value = 1, step=0.1),
+          sliderInput(width=100, inputId="A", label="A", min=0, max=3.5,value = 1, step=0.1),
           sliderInput(inputId="C", label="C", min=0, max=2,value = 1, step=0.1),
           sliderInput(inputId="D", label="D", min=0, max=5,value = 1, step=0.1),
           sliderInput(inputId="E", label="E", min=0, max=2.5,value = 1, step=0.1),
@@ -40,7 +43,7 @@ dashboardPage(
           sliderInput(inputId="L", label="L", min=0, max=2,value = 1, step=0.1)
         )
       ),
-      tabItem(tabName = "MachinesControls",
+      tabItem(tabName = "MachineControls",
         box(
           title = "Machine Controls",
           status = "primary",
