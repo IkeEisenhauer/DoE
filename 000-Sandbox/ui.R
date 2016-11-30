@@ -35,12 +35,12 @@ dashboardPage(
           title = "Process Controls",
           status = "primary",
           solidHeader = TRUE,
-          div(style="height: 27px;",sliderInput(inputId="A", label="A", min=0, max=3.5,value = 1, step=0.1)),
-          div(style="height: 27px;",sliderInput(inputId="C", label="C", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 27px;",sliderInput(inputId="D", label="D", min=0, max=5,value = 1, step=0.1)),
-          div(style="height: 27px;",sliderInput(inputId="I", label="I", min=0.4, max=2,value = 1, step=0.1)),
-          div(style="height: 27px;",sliderInput(inputId="L", label="L", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 27px;",sliderInput(inputId="R", label="R", min=0, max=18,value = 1, step=0.1))
+          div(style="height: 50px;",sliderInput(inputId="A", label="A", min=0, max=3.5,value = 1, step=0.1)),
+          div(style="height: 50px;",sliderInput(inputId="C", label="C", min=0, max=2,value = 1, step=0.1)),
+          div(style="height: 50px;",sliderInput(inputId="D", label="D", min=0, max=5,value = 1, step=0.1)),
+          div(style="height: 50px;",sliderInput(inputId="I", label="I", min=0.4, max=2,value = 1, step=0.1)),
+          div(style="height: 50px;",sliderInput(inputId="L", label="L", min=0, max=2,value = 1, step=0.1)),
+          div(style="height: 50px;",sliderInput(inputId="R", label="R", min=0, max=18,value = 1, step=0.1))
         )
       ),
       tabItem(tabName = "MachineControls",
