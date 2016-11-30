@@ -58,6 +58,6 @@ shinyServer(function(input, output) {
         }
       )  
                             
-      output$table <- renderTable({values$df}, include.rownames=F)
+      output$table <- renderTable({values$df}, lengthMenu=c(5,10,20), pageLength = 10, include.rownames=F)
         
   })
