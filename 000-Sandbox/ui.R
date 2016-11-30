@@ -34,5 +34,4 @@ dashboardPage(
   dashboardBody( 
     h3("Output and data type"),
     tableOutput("table")
-  )
-))
+  ))
