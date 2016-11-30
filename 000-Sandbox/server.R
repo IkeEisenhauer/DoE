@@ -25,6 +25,7 @@ shinyServer(function(input, output) {
           YLD <- YLD + 5*abs(input$I-input$K)
           YLD <- YLD + (input$J)^2 + (input$M)^2 - (input$J*input$M)
           YLD <- YLD + 10*exp(-100*((0.72*input$L-1.3)^2+(input$N-1.3)^2))
+          YLD <- YLD + rnorm(1,0,1)
           
           # create the new line to be added from your inputs
           newLine <- isolate(c(input$A,
