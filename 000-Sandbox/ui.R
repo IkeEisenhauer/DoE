@@ -12,10 +12,7 @@ dashboardPage(
     titleWidth = 350
   ),
   dashboardSidebar(
-     dashboardSidebar(
-    sidebarMenu(
-    width = 350,
-    sidebarMenu(style = "position: fixed; overflow: visible;",
+    sidebarMenu(width=350, style = "position: fixed; overflow: visible;",
       menuItem("Overview", tabName = "Overview", icon = icon("info-circle")),
       menuItem("Process Controls", tabName = "ProcessControls", icon = icon("industry")),
       menuItem("Machine Controls", tabName = "MachineControls", icon = icon("steam")),
