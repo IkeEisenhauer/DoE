@@ -36,7 +36,7 @@ shinyServer(function(input, output) {
                                input$I,
                                input$J,
                                input$K,
-                               input$L
+                               input$L,
                                YLD))
           # update your data
           # note the unlist of newLine, this prevents a bothersome warning message that the rbind will return regarding rownames because of using isolate.
