@@ -27,7 +27,7 @@ dashboardPage(
     tabItems(
       tabItem(
         tabName = "Overview",
-        h3("Simulation for Homework 14 in STAT465")
+        h3("Simulation for Homework 15 in STAT465")
       ),
       tabItem(
         tabName = "ProcessControls",
@@ -38,8 +38,8 @@ dashboardPage(
           solidHeader = TRUE,
           div(style="height: 150px;",sliderInput(inputId="A", label="A", min=0, max=3.5,value = 1, step=0.1)),
           div(style="height: 150px;",sliderInput(inputId="C", label="C", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="D", label="D", min=0, max=5,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="I", label="I", min=0.4, max=2,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="D", label="D", min=0, max=2,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="I", label="I", min=0, max=2,value = 1, step=0.1)),
           div(style="height: 150px;",sliderInput(inputId="L", label="L", min=0, max=2,value = 1, step=0.1))
         ))
       ),
@@ -52,7 +52,7 @@ dashboardPage(
           div(style="height: 150px;",sliderInput(inputId="B", label="B", min=0, max=3,value = 1, step=0.1)),
           div(style="height: 150px;",sliderInput(inputId="E", label="E", min=0, max=2.5,value = 1, step=0.1)),
           div(style="height: 150px;",sliderInput(inputId="F", label="F", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="K", label="K", min=0, max=1.2,value = 1, step=0.1))
+          div(style="height: 150px;",sliderInput(inputId="K", label="K", min=0.4, max=3.5,value = 1, step=0.1))
         ))
       ),
       tabItem(tabName = "MaterialProperties",
@@ -61,9 +61,9 @@ dashboardPage(
           title = "Material Properties",
           status = "primary",
           solidHeader = TRUE,
-          div(style="height: 150px;",sliderInput(inputId="G", label="G", min=0, max=2.5,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="H", label="H", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="J", label="J", min=0, max=3,value = 1, step=0.1))
+          div(style="height: 150px;",sliderInput(inputId="G", label="G", min=0.4, max=2,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="H", label="H", min=0, max=1.2,value = 1, step=0.1)),
+          div(style="height: 150px;",sliderInput(inputId="J", label="J", min=0, max=1.5,value = 1, step=0.1))
         ))
       ),
       tabItem(tabName = "ExperimentalResults",
