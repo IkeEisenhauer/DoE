@@ -19,7 +19,7 @@ shinyServer(function(input, output) {
         # your action button condition
         if(input$addButton > 0) {
           # Create Yield
-          isolate(YLD <- 9-3(abs(input$F+input$G-3))+4*(1+(input$C-1.5)^2-(input$K-1)^2-0.2*(input$C-1.5)*(input$K-1)) + rnorm(1,0,2))
+          isolate(YLD <- 9-3*(abs(input$F+input$G-3))+4*(1+(input$C-1.5)^2-(input$K-1)^2-0.2*(input$C-1.5)*(input$K-1)) + rnorm(1,0,2))
           
           # create the new line to be added from your inputs
           newLine <- isolate(c(input$C,
