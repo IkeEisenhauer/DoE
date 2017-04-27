@@ -9,8 +9,7 @@ shinyServer(function(input, output) {
   # Reset Data
     exp_data = read.table(text="",
                          col.names=c("C","F","G","K","YLD"),
-                          colClasses = c("double","double","double","double",
-                                        "double") 
+                          colClasses = c("double","double","double","double","double") 
                          )
   
   # The important part of reactiveValues()
