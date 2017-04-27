@@ -8,14 +8,13 @@ shinyServer(function(input, output) {
 
   # Reset Data
     exp_data = read.table(text="",
-                         col.names=c("IDX","C","F","G","K","YLD"),
-                          colClasses = c("double","double","double","double","double",
+                         col.names=c("C","F","G","K","YLD"),
+                          colClasses = c("double","double","double","double",
                                         "double") 
                          )
   
   # The important part of reactiveValues()
     values <- reactiveValues()
-    values$df <- exp_data
     observe({
         # your action button condition
         if(input$addButton > 0) {
@@ -23,8 +22,7 @@ shinyServer(function(input, output) {
           isolate(YLD <- 9-3(abs(input$F+input$G-3))+4*(1+(input$C-1.5)^2-(input$K-1)^2-0.2*(input$C-1.5)*(input$K-1)) + rnorm(1,0,2))
           
           # create the new line to be added from your inputs
-          newLine <- isolate(c(nrow(as.matrix(values$df))+1,
-                               input$C,
+          newLine <- isolate(c(input$C,
                                input$F,
                                input$G,
                                input$K,
