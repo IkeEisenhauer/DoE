@@ -25,7 +25,7 @@ dashboardPage(
     tabItems(
       tabItem(
         tabName = "Overview",
-        h3("Simulation for Hands On Exeercises STAT466")
+        h3("Simulation for Hands On Exercises STAT466")
       ),
       tabItem(
         tabName = "Inputs",
