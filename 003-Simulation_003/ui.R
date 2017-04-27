@@ -34,13 +34,13 @@ dashboardPage(
           title = "Controls",
           status = "primary",
           solidHeader = TRUE,
-          div(style="height: 50px;",numericInput(inputId="A", label="A [0--3]", value=0)),
-          div(style="height: 50px;",numericInput(inputId="B", label="B [0--3]", value=0)),
-          div(style="height: 50px;",numericInput(inputId="C", label="C [0--3]", value=0)),
-          div(style="height: 50px;",numericInput(inputId="F", label="F [0--3]",value=0)),
-          div(style="height: 50px;",numericInput(inputId="G", label="G [0--3]",value=0)),
-          div(style="height: 50px;",numericInput(inputId="C", label="H [0--3]", value=0)),
-          div(style="height: 50px;",numericInput(inputId="K", label="K [0--2]",value=0))
+          div(style="height: 75px;",numericInput(inputId="A", label="A [0--3]", value=0)),
+          div(style="height: 75px;",numericInput(inputId="B", label="B [0--3]", value=0)),
+          div(style="height: 75px;",numericInput(inputId="C", label="C [0--3]", value=0)),
+          div(style="height: 75px;",numericInput(inputId="F", label="F [0--3]",value=0)),
+          div(style="height: 75px;",numericInput(inputId="G", label="G [0--3]",value=0)),
+          div(style="height: 75px;",numericInput(inputId="C", label="H [0--3]", value=0)),
+          div(style="height: 75px;",numericInput(inputId="K", label="K [0--2]",value=0))
         ))
       ),
       tabItem(tabName = "ExperimentalResults",
