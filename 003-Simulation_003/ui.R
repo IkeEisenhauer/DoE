@@ -34,10 +34,10 @@ dashboardPage(
           title = "Controls",
           status = "primary",
           solidHeader = TRUE,
-          div(style="height: 150px;",textInput(inputId="C", label="C")),
-          div(style="height: 150px;",textInput(inputId="F", label="F")),
-          div(style="height: 150px;",textInput(inputId="G", label="G")),
-          div(style="height: 150px;",textInput(inputId="K", label="K"))
+          div(style="height: 150px;",numericInput(inputId="C", label="C", min=0,max=3)),
+          div(style="height: 150px;",numericInput(inputId="F", label="F",min=0,max=3)),
+          div(style="height: 150px;",numericInput(inputId="G", label="G",min=0,max=3)),
+          div(style="height: 150px;",numericInput(inputId="K", label="K",min=0,max=2))
         ))
       ),
       tabItem(tabName = "ExperimentalResults",
