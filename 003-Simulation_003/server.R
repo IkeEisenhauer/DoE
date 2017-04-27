@@ -14,6 +14,7 @@ shinyServer(function(input, output) {
   
   # The important part of reactiveValues()
     values <- reactiveValues()
+    values$df <- exp_data
     observe({
         # your action button condition
         if(input$addButton > 0) {
