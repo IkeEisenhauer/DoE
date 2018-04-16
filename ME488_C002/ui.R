@@ -27,7 +27,7 @@ dashboardPage(
     tabItems(
       tabItem(
         tabName = "Overview",
-        h3("Simulation for Week 2 Class and Homework 2 for ME 488")
+        h3("Simulation for Week 3 Class and Homework 3 for ME 488")
       ),
       tabItem(
         tabName = "ProcessControls",
