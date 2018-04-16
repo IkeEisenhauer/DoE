@@ -1,5 +1,6 @@
 ##############################
-### DoE ME 488 In Class 001 - server.R ###
+### DoE ME 488 In Class 002 - server.R ###
+### Factorial Model ####
 ##############################
 
 library(shiny)
@@ -8,9 +9,8 @@ shinyServer(function(input, output) {
 
   # Reset Data
     exp_data = read.table(text="",
-                         col.names=c("IDX","B","E","F","K","N","Q","YLD"),
-                          colClasses = c("double","double","double","double","double",
-                                        "double","double","double") 
+                         col.names=c("IDX","B","E","Q","YLD"),
+                          colClasses = c("double","double","double","double","double") 
                          )
   
   # The important part of reactiveValues()
@@ -20,7 +20,7 @@ shinyServer(function(input, output) {
         # your action button condition
         if(input$addButton > 0) {
           # Create Yield
-          isolate(YLD <- 5+3*input$F-2*input$Q + rnorm(1,0,0.1))
+          isolate(YLD <- 3+2*input$B+3.2*input$E-0.78*(input$B)*(input$E)-1.3*input$Q + rnorm(1,0,0.2))
           
           # create the new line to be added from your inputs
           newLine <- isolate(c(nrow(as.matrix(values$df))+1,
@@ -29,15 +29,15 @@ shinyServer(function(input, output) {
                                #input$C,
                                #input$D,
                                input$E,
-                               input$F,
+                               #input$F,
                                #input$G,
                                #input$H,
                                #input$I,
                                #input$J,
-                               input$K,
+                               #input$K,
                                #input$L,
                                #input$M,
-                               input$N,
+                               #input$N,
                                #input$O,
                                #input$P,
                                input$Q,
@@ -50,7 +50,7 @@ shinyServer(function(input, output) {
       })
 
       output$btnDownload <- downloadHandler(
-        filename = function() {paste("Experimental_Data_C001", ".csv", sep='')},
+        filename = function() {paste("Experimental_Data_C002", ".csv", sep='')},
         content = function(file) {
           write.csv(values$df,file)
         }
