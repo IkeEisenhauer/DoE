@@ -1,5 +1,5 @@
 ##############################
-### DoE ME 488 In Class 001 - ui.R ########
+### DoE ME 488 In Class 002 - ui.R ########
 ##############################
 
 library(shiny) 
@@ -8,7 +8,7 @@ library(shinydashboard)
 dashboardPage(
   skin="green",
   dashboardHeader(
-    title="ME 488 In Class 001 - Eisenhauer",
+    title="ME 488 In Class 002 - Eisenhauer",
     titleWidth = 350
   ),
   dashboardSidebar(
@@ -50,12 +50,9 @@ dashboardPage(
           title = "Machine Controls",
           status = "primary",
           solidHeader = TRUE,
-          div(style="height: 150px;",sliderInput(inputId="B", label="B", min=0, max=3,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="E", label="E", min=0, max=2.5,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="F", label="F", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="K", label="K", min=0, max=1.2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="N", label="N", min=0, max=1.5,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="Q", label="Q", min=0, max=10,value = 1, step=0.1))
+          div(style="height: 150px;",sliderInput(inputId="B", label="B", min=0, max=5,value = 1, step=0.5)),
+          div(style="height: 150px;",sliderInput(inputId="E", label="E", min=0, max=5,value = 1, step=0.5)),
+          div(style="height: 150px;",sliderInput(inputId="Q", label="Q", min=0, max=5,value = 1, step=0.5))
         ))
       ),
       tabItem(tabName = "MaterialProperties",
