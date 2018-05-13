@@ -20,6 +20,7 @@ shinyServer(function(input, output) {
         # your action button condition
         if(input$addButton > 0) {
           # Create Yield
+          isolate(YLD <- 25+50*input$Q+0.5*input$E-5*input$B + rnorm(1,0,5))
           
           # create the new line to be added from your inputs
           newLine <- isolate(c(nrow(as.matrix(values$df))+1,
@@ -49,6 +50,7 @@ shinyServer(function(input, output) {
       })
 
       output$btnDownload <- downloadHandler(
+        filename = function() {paste("Experimental_Data_C003", ".csv", sep='')},
         content = function(file) {
           write.csv(values$df,file)
         }
