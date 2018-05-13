@@ -44,7 +44,7 @@ dashboardPage(
           div(style="height: 150px;",sliderInput(inputId="R", label="R", min=0, max=18,value = 1, step=0.1))
         ))
       ),
-      tabItem(tabName = "Machine Controls",
+      tabItem(tabName = "MachineControls",
         div(style="height: 1200px;",box(
           width = 750,
           title = "Machine Controls",
