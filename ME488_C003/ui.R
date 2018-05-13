@@ -29,21 +29,6 @@ dashboardPage(
         tabName = "Overview",
         h3("Simulation for Homework 5 for ME 488")
       ),
-      tabItem(
-        tabName = "ProcessControls",
-        div(style="height: 1200px;",box(
-          width = 750,
-          title = "Process Controls",
-          status = "primary",
-          solidHeader = TRUE,
-          div(style="height: 150px;",sliderInput(inputId="A", label="A", min=0, max=3.5,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="C", label="C", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="D", label="D", min=0, max=5,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="I", label="I", min=0.4, max=2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="L", label="L", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="R", label="R", min=0, max=18,value = 1, step=0.1))
-        ))
-      ),
       tabItem(tabName = "MachineControls",
         div(style="height: 1200px;",box(
           width = 750,
@@ -54,21 +39,8 @@ dashboardPage(
           div(style="height: 150px;",sliderInput(inputId="E", label="Brake Fluid Temperature(E)", min=50, max=120,value = 70, step=5)),
           div(style="height: 150px;",sliderInput(inputId="Q", label="Engine Size(Q)", min=2, max=16,value = 2, step=2))
         ))
-      ),
-      tabItem(tabName = "MaterialProperties",
-        div(style="height: 1200px;",box(
-          width = 750,
-          title = "Material Properties",
-          status = "primary",
-          solidHeader = TRUE,
-          div(style="height: 150px;",sliderInput(inputId="G", label="G", min=0, max=2.5,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="H", label="H", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="J", label="J", min=0, max=3,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="M", label="M", min=0, max=2,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="O", label="O", min=0.4, max=3.5,value = 1, step=0.1)),
-          div(style="height: 150px;",sliderInput(inputId="P", label="P", min=0, max=2.0,value = 1, step=0.1))
-        ))
-      ),
+      )
+      ,
       tabItem(tabName = "ExperimentalResults",
         h3("Experimental Results"),
         downloadButton("btnDownload", "Download Experimental Data"),
